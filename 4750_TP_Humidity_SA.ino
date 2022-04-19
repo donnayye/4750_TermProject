@@ -16,12 +16,11 @@ void loop() {
     Serial.println(F("Failed to read from DHT sensor"));
     return;
   }
-  Serial.print("Humidity: ");
+  Serial.print("H ");
   Serial.print(h);
-  Serial.print("%");
-  Serial.println(" ");
-  Serial.print("Temperature: ");
+  Serial.print("\n");
+  Serial.print("T ");
   Serial.print(t);
-  Serial.print("°F");
-  delay(1000);
+  Serial.print("\n");
+  delay(2001);
 }

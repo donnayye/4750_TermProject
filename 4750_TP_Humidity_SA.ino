@@ -1,4 +1,4 @@
- #include "DHT.h"
+ #include "DHT.h"                         //UPLOADED TO ARDUINO
  #define DHTPIN 2
  #define DHTTYPE DHT11
  DHT dht(DHTPIN, DHTTYPE);
@@ -10,14 +10,14 @@ void setup() {
 }
 
 void loop() {
-  float h = dht.readHumidity();
-  float t = dht.readTemperature(true);
-  if(isnan(h) || isnan(t)){
+  float h = dht.readHumidity();           //Read humidity (percentage), store in h
+  float t = dht.readTemperature(true);    //Read temperature (Fahrenheit), store in t
+  if(isnan(h) || isnan(t)){               //If either values don't represent a decimal, there was a reading error
     Serial.println(F("Failed to read from DHT sensor"));
     return;
   }
-  Serial.print("H ");
-  Serial.print(h);
+  Serial.print("H ");                     //Print humidity and temp over monitor and
+  Serial.print(h);                        //send over UART
   Serial.print("\n");
   Serial.print("T ");
   Serial.print(t);

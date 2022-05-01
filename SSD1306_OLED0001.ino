@@ -1,10 +1,3 @@
-/*
- * Created by ArduinoGetStarted.com
- *
- * This example code is in the public domain
- *
- * Tutorial page: https://arduinogetstarted.com/tutorials/arduino-oled
- */
 // SDA pin: is a serial data pin for I2C interface
 // SDL pin: is the serial clock pin for I2C interface
 // SDA = A4 and SDL = A5 
